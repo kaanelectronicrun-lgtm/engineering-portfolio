@@ -221,6 +221,40 @@ Sample inputs from the dataset:
 
 ---
 
+### 7. WallVid — Native Windows Video Wallpaper App
+
+> A ~300 KB native C++ Win32 application that plays any video as a live desktop wallpaper — no browser, no Electron, no runtime dependencies.
+
+<img src="assets/wallvid-demo.png" width="700" alt="WallVid — cyberpunk video playing as Windows desktop wallpaper with interactive icons in foreground">
+
+The video sits as a `WS_CHILD` of Progman's **inner WorkerW** (Win11 26200), keeping `SHELLDLL_DefView` on top by natural Z-order — desktop icons remain fully interactive. No color-key hacks, no wallpaper image modification.
+
+#### Features
+- Plays `.mp4` / `.mkv` / `.mov` / `.avi` / `.webm` / `.wmv` directly as desktop background
+- **Scene picker** — thumbnail grid of bundled CC0 ambient scenes + personal library (newest-first, up to 10) + "Load your own video..."
+- **Auto-pause when covered** — pauses per-monitor when a fullscreen app takes over; pauses all on session lock (Win+L), so games keep full GPU headroom
+- **yt-dlp integration** (opt-in, disabled by default) — URL import with live progress bar, download speed, auto-update hourly
+- System tray: scene select, volume slider, restart, exit
+- Volume overlay: bottom-right, 10-second auto-hide
+- Single-instance protection, EULA dialog on first launch
+- Survives `explorer.exe` restart via inner-WorkerW reparenting
+- Splash + closing fade animations (layered windows + GDI)
+- Steam distribution with Inno Setup installer (per-user, `%localappdata%`)
+
+#### Architecture
+- **Language:** C++17, MSVC `cl.exe` (Visual Studio 2022 Build Tools)
+- **APIs:** Win32 · Media Foundation `IMFPMediaPlayer` · Common Controls 6 · COM
+- **Build:** single `build.bat` → `WallVid2.exe` (~300 KB, statically linked, `/SUBSYSTEM:WINDOWS`)
+- **Runtime state:** `%LOCALAPPDATA%\WallVid2\` — isolated from install dir so Steam "verify files" cannot wipe user data
+
+![C++](https://img.shields.io/badge/C++17-00599C?style=flat-square&logo=cplusplus&logoColor=white)
+![Win32](https://img.shields.io/badge/Win32_API-0078D4?style=flat-square&logo=windows&logoColor=white)
+![Media Foundation](https://img.shields.io/badge/Media_Foundation-0078D4?style=flat-square&logo=windows&logoColor=white)
+![Steam](https://img.shields.io/badge/Steam-000000?style=flat-square&logo=steam&logoColor=white)
+![Inno Setup](https://img.shields.io/badge/Inno_Setup-264D87?style=flat-square)
+
+---
+
 ## Skills & Tools
 
 ### Hardware Design

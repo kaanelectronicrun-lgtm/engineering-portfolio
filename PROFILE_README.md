@@ -21,6 +21,7 @@ I design systems engineered to perform in real-world conditions, then build the 
 | [Sophon Electronics](https://github.com/kaanelectronicrun-lgtm/engineering-portfolio#4-sophon-electronics--multi-platform-ee-platform) | EE tooling suite · Supabase auth · Android | TypeScript · Supabase · Capacitor |
 | [Kardemir Surface Inspector](https://github.com/kaanelectronicrun-lgtm/engineering-portfolio#5-kardemir-surface-inspector--real-time-cv-tool) | Real-time steel surface anomaly detection · single .exe | Python · OpenCV · PyInstaller |
 | [Kardemir CNN Classifier](https://github.com/kaanelectronicrun-lgtm/engineering-portfolio#6-kardemir-cnn-classifier--industrial-defect-detection) | 99.4% accuracy · ONNX runtime · bilingual GUI · single .exe | TensorFlow · ONNX · Tkinter |
+| [WallVid](https://github.com/kaanelectronicrun-lgtm/engineering-portfolio#7-wallvid--native-windows-video-wallpaper-app) | Native video wallpaper · ~300KB .exe · Win32 · Media Foundation · Steam | C++17 · Win32 API |
 
 ---
 
