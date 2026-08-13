@@ -12,6 +12,7 @@
 
 - [Featured Software & AI Projects](#featured-software--ai-projects)
   - [Sentinel AI](#sentinel-ai--factory-safety-copilot)
+  - [Sophon Mobile](#sophon-mobile--android-engineering-app)
   - [Sophon Electronics](#sophon-electronics--cross-platform-engineering-suite)
   - [Sophon EMC](#sophon-emc--2d-fdtd-electromagnetic-wave-simulator)
   - [Steel Defect Classifier](#steel-surface-defect-classifier)
@@ -44,6 +45,28 @@
 ![OpenAI API](https://img.shields.io/badge/OpenAI_API-412991?style=flat-square&logo=openai&logoColor=white)
 ![OpenCV](https://img.shields.io/badge/OpenCV-5C3EE8?style=flat-square&logo=opencv&logoColor=white)
 ![SQLite](https://img.shields.io/badge/SQLite-003B57?style=flat-square&logo=sqlite&logoColor=white)
+
+---
+
+### Sophon Mobile — Android Engineering App
+
+> Mobile-first electrical-engineering application packaged for Android with Capacitor.
+
+<p align="center">
+  <img src="assets/sophon-mobile-home.png" width="250" alt="Sophon Mobile calculator catalog">
+  <img src="assets/sophon-mobile-workspace.png" width="250" alt="Sophon Mobile IPC-2152 workspace">
+  <img src="assets/sophon-mobile-simulation.png" width="250" alt="Sophon Mobile thermal and field simulation">
+</p>
+
+- Touch-first calculator catalog and IPC-2152 design workspace
+- Thermal, electric-field and voltage simulations with interactive 3D engineering assets
+- Capacitor Android project with generated launcher icons and splash assets
+- Supabase Auth/PostgREST integration with RLS, KVKK consent and account-deletion flow
+- Offline-aware local session cache and in-app feedback queue
+
+![Capacitor](https://img.shields.io/badge/Capacitor_Android-119EFF?style=flat-square&logo=capacitor&logoColor=white)
+![Three.js](https://img.shields.io/badge/Three.js-000000?style=flat-square&logo=threedotjs&logoColor=white)
+![Supabase](https://img.shields.io/badge/Supabase_RLS-3ECF8E?style=flat-square&logo=supabase&logoColor=white)
 
 ---
 
