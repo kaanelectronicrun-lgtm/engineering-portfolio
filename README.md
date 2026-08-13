@@ -13,6 +13,7 @@
 - [Featured Software & AI Projects](#featured-software--ai-projects)
   - [Sentinel AI](#sentinel-ai--factory-safety-copilot)
   - [Sophon Mobile](#sophon-mobile--android-engineering-app)
+  - [S2P Model Generator](#s2p-model-generator--datasheet-to-simulation-models)
   - [Sophon Electronics](#sophon-electronics--cross-platform-engineering-suite)
   - [Sophon EMC](#sophon-emc--2d-fdtd-electromagnetic-wave-simulator)
   - [Steel Defect Classifier](#steel-surface-defect-classifier)
@@ -67,6 +68,31 @@
 ![Capacitor](https://img.shields.io/badge/Capacitor_Android-119EFF?style=flat-square&logo=capacitor&logoColor=white)
 ![Three.js](https://img.shields.io/badge/Three.js-000000?style=flat-square&logo=threedotjs&logoColor=white)
 ![Supabase](https://img.shields.io/badge/Supabase_RLS-3ECF8E?style=flat-square&logo=supabase&logoColor=white)
+
+---
+
+### S2P Model Generator — Datasheet to Simulation Models
+
+> Converts component data and datasheet curves into Touchstone, SPICE and engineering-analysis outputs.
+
+<p align="center">
+  <img src="assets/s2p-model-generator.png" width="31%" alt="S2P model generator GUI">
+  <img src="assets/s2p-datasheet.png" width="31%" alt="Datasheet to S2P workflow">
+  <img src="assets/s2p-analysis.png" width="31%" alt="Component analysis workflow">
+</p>
+
+- Generates Touchstone `.s2p`, SPICE subcircuits, impedance tables and engineering reports
+- Implements Gustavsen vector fitting, passive Foster-I RLC synthesis and adaptive model order
+- Checks passivity, stability, causality and self-resonant-frequency consistency
+- Extracts datasheet curves with confidence reporting and supports regulator/DC-DC analysis to JSON/CSV/Markdown/Excel
+- Ships as a PyQt5 desktop application and standalone Windows installer
+
+[Source and Windows release →](https://github.com/kaanelectronicrun-lgtm/s2p-model-generator)
+
+![Python](https://img.shields.io/badge/Python-3776AB?style=flat-square&logo=python&logoColor=white)
+![NumPy](https://img.shields.io/badge/NumPy-013243?style=flat-square&logo=numpy&logoColor=white)
+![Touchstone](https://img.shields.io/badge/Touchstone-S2P-183E60?style=flat-square)
+![SPICE](https://img.shields.io/badge/SPICE-RLC-B71C1C?style=flat-square)
 
 ---
 
