@@ -1,7 +1,7 @@
-# Kaan Akcan — Engineering Portfolio
+# Kaan Akcan — Software, Applied AI & Engineering Portfolio
 
-> Electronics Design Engineer specializing in hardware architecture, power systems, RF/BLE, and engineering software tooling.
-> I design systems engineered to perform in real-world conditions — then build the simulation and AI tools to validate decisions before fabrication.
+> Software and Applied AI Engineer with an Electrical & Electronics Engineering foundation.
+> I build AI-backed APIs, computer-vision pipelines, engineering simulators and native applications with measurable evaluation and testable architecture.
 
 **Training:** High-Speed System Design · Power Electronics System Design — eDevre  
 **Contact:** kaan.electronic.run@gmail.com · [LinkedIn](https://linkedin.com/in/kaanakcan)
@@ -10,21 +10,104 @@
 
 ## Table of Contents
 
+- [Featured Software & AI Projects](#featured-software--ai-projects)
+  - [Sentinel AI](#sentinel-ai--factory-safety-copilot)
+  - [Sophon Electronics](#sophon-electronics--cross-platform-engineering-suite)
+  - [Sophon EMC](#sophon-emc--2d-fdtd-electromagnetic-wave-simulator)
+  - [Steel Defect Classifier](#steel-surface-defect-classifier)
+  - [WallVid2](#wallvid2--native-windows-video-wallpaper)
 - [Hardware Projects](#hardware-projects)
-  - [Wearable BLE Fitness Tracker](#1-wearable-ble-fitness-tracker--system-architecture)
-  - [LDO & PDN Digital Twins](#2-ldo--pdn-digital-twins)
-- [Software & AI Projects](#software--ai-projects)
-  - [Sophon EMC](#3-sophon-emc--2d-fdtd-electromagnetic-wave-simulator)
-  - [Sophon Electronics](#4-sophon-electronics--multi-platform-ee-platform)
-  - [Kardemir Surface Inspector](#5-kardemir-surface-inspector--real-time-cv-tool)
-  - [Kardemir CNN Classifier](#6-kardemir-cnn-classifier--industrial-defect-detection)
+  - [Wearable BLE Fitness Tracker](#wearable-ble-fitness-tracker--system-architecture)
+  - [LDO & PDN Digital Twins](#ldo--pdn-digital-twins)
+- [Detailed Project Case Studies](#detailed-project-case-studies)
 - [Skills & Tools](#skills--tools)
+
+---
+
+## Featured Software & AI Projects
+
+### Sentinel AI — Factory Safety Copilot
+
+> Local-first video analysis product that turns factory-camera evidence into structured, reviewable safety findings.
+
+**Stack:** Python · FastAPI · OpenAI Responses API · Pydantic · OpenCV · SQLite · OpenVINO
+
+- Detects PPE and restricted-zone risks and produces evidence, severity and recommended actions
+- Uses explicit user approval before GPT verification and validates responses with structured Pydantic models
+- Implements sequential video decoding, anonymous multi-person tracking, polygon zones and temporal event validation
+- Exports annotated MP4, JSON and PDF reports
+- Includes a restart-safe SQLite job queue, role-based access, HttpOnly sessions and PBKDF2-SHA256 password storage
+- Provides reproducible PyTorch/OpenVINO benchmarks and event-level precision, recall, F1 and temporal IoU evaluation
+
+![Python](https://img.shields.io/badge/Python-3776AB?style=flat-square&logo=python&logoColor=white)
+![FastAPI](https://img.shields.io/badge/FastAPI-009688?style=flat-square&logo=fastapi&logoColor=white)
+![OpenAI API](https://img.shields.io/badge/OpenAI_API-412991?style=flat-square&logo=openai&logoColor=white)
+![OpenCV](https://img.shields.io/badge/OpenCV-5C3EE8?style=flat-square&logo=opencv&logoColor=white)
+![SQLite](https://img.shields.io/badge/SQLite-003B57?style=flat-square&logo=sqlite&logoColor=white)
+
+---
+
+### Sophon Electronics — Cross-Platform Engineering Suite
+
+> A PCB stackup editor and 56 engineering calculators delivered from one testable TypeScript codebase.
+
+- Targets web/PWA, Windows desktop and Android
+- Enforces `domain → app → view → infra` boundaries with dependency-cruiser and strict TypeScript
+- Includes controlled-impedance, IPC, EMI and power-integrity calculations
+- Uses Canvas2D/SVG visualization and Three.js field models
+- Quality pipeline includes **406 unit tests**, formatting, lint, type checking and bundle limits
+
+![TypeScript](https://img.shields.io/badge/TypeScript_strict-3178C6?style=flat-square&logo=typescript&logoColor=white)
+![Vite](https://img.shields.io/badge/Vite-646CFF?style=flat-square&logo=vite&logoColor=white)
+![Vitest](https://img.shields.io/badge/406_tests-6E9F18?style=flat-square&logo=vitest&logoColor=white)
+![Three.js](https://img.shields.io/badge/Three.js-000000?style=flat-square&logo=threedotjs&logoColor=white)
+
+---
+
+### Sophon EMC — 2D FDTD Electromagnetic Wave Simulator
+
+> Real-time TE-mode FDTD solver and visualization application for the browser and Windows.
+
+- 21 scenarios, 20 visualization modes, eight source types and multiple oscilloscope probes
+- PNG/GIF export and real-time Canvas2D field rendering
+- 53 unit tests plus production-build Playwright E2E, lint, type checking and architecture checks
+
+![TypeScript](https://img.shields.io/badge/TypeScript-3178C6?style=flat-square&logo=typescript&logoColor=white)
+![Electron](https://img.shields.io/badge/Electron-47848F?style=flat-square&logo=electron&logoColor=white)
+![Playwright](https://img.shields.io/badge/Playwright-2EAD33?style=flat-square&logo=playwright&logoColor=white)
+
+---
+
+### Steel Surface Defect Classifier
+
+> End-to-end four-class computer-vision pipeline with a bilingual Windows application.
+
+- Achieved **99.4% accuracy** and **0.993 macro F1** on a held-out 315-image test set
+- Uses shared train/inference preprocessing, stratified 70/15/15 splitting and class weighting
+- Packages a 1.3 MB TensorFlow/ONNX model for CPU inference without requiring Python on the target machine
+
+![TensorFlow](https://img.shields.io/badge/TensorFlow-FF6F00?style=flat-square&logo=tensorflow&logoColor=white)
+![ONNX](https://img.shields.io/badge/ONNX_Runtime-005CED?style=flat-square&logo=onnx&logoColor=white)
+![OpenCV](https://img.shields.io/badge/OpenCV-5C3EE8?style=flat-square&logo=opencv&logoColor=white)
+
+---
+
+### WallVid2 — Native Windows Video Wallpaper
+
+> Approximately 300 KB native Windows application with no Electron or browser runtime.
+
+- C++17, Win32, Media Foundation and COM
+- Multi-monitor fullscreen detection and automatic pause on session lock
+- Explorer restart resilience, single-instance protection and per-user installation
+
+![C++](https://img.shields.io/badge/C++17-00599C?style=flat-square&logo=cplusplus&logoColor=white)
+![Win32](https://img.shields.io/badge/Win32_API-0078D4?style=flat-square&logo=windows&logoColor=white)
 
 ---
 
 ## Hardware Projects
 
-### 1. Wearable BLE Fitness Tracker — System Architecture
+### Wearable BLE Fitness Tracker — System Architecture
 
 > Complete end-to-end hardware architecture for an ultra-compact wearable device.
 
@@ -69,7 +152,7 @@
 
 ---
 
-### 2. LDO & PDN Digital Twins
+### LDO & PDN Digital Twins
 
 > Browser-based interactive simulation tools for power and signal integrity decisions — built to validate architecture choices before fabrication.
 
@@ -99,7 +182,7 @@
 
 ---
 
-## Software & AI Projects
+## Detailed Project Case Studies
 
 ### 3. Sophon EMC — 2D FDTD Electromagnetic Wave Simulator
 
