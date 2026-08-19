@@ -21,6 +21,7 @@
 - [Hardware Projects](#hardware-projects)
   - [Wearable BLE Fitness Tracker](#wearable-ble-fitness-tracker--system-architecture)
   - [LDO & PDN Digital Twins](#ldo--pdn-digital-twins)
+  - [Full-Wave Z₀ Golden](#full-wave-z-golden--openems-fdtd-vs-quasi-static-reconcile)
 - [Detailed Project Case Studies](#detailed-project-case-studies)
 - [Skills & Tools](#skills--tools)
 
@@ -228,6 +229,32 @@
 ![WebGPU](https://img.shields.io/badge/WebGPU-FF4500?style=flat-square)
 ![Three.js](https://img.shields.io/badge/Three.js-000000?style=flat-square&logo=threedotjs&logoColor=white)
 ![Canvas2D](https://img.shields.io/badge/Canvas2D-E34F26?style=flat-square&logo=html5&logoColor=white)
+
+---
+
+### Full-Wave Z₀ Golden — openEMS FDTD vs. Quasi-Static Reconcile
+
+> A golden-validator for PCB impedance analysis: a full-wave FDTD solver computes microstrip Z₀(f)
+> including dispersion and soldermask loading, then reconciles it against the closed-form
+> Hammerstad–Jensen value and flags where the fast model can no longer be trusted.
+
+<img src="assets/z0-golden.png" width="700" alt="Full-wave Z0(f) golden vs quasi-static analytic reference">
+
+- Full-wave openEMS **52.36 Ω** lands within **0.46 %** of an independent Hammerstad–Jensen hand
+  calculation (52.60 Ω) — the golden is validated, not just "green"
+- Soldermask case surfaces a **3.45 %** reconcile gap the bare analytic model cannot see (Z₀ pulled
+  down ~1.8 Ω), plus visible dispersion (49.6 → 51.3 Ω across 0–20 GHz)
+- Runs as an opt-in node in a reproducible-analysis DAG: deterministic inputs-hash, cached result,
+  provenance; the FDTD dependency is isolated behind a subprocess bridge and out of the fast path
+- Contract-first JSON setup/report, schema-validated; reconcile logic unit-tested against a stubbed
+  solver so CI needs no EM solver
+
+**→ [Case study & live results](https://github.com/kaanelectronicrun-lgtm/pcb-fullwave-z0-golden)**
+
+![openEMS](https://img.shields.io/badge/openEMS-FDTD-1f6feb?style=flat-square)
+![Python](https://img.shields.io/badge/Python-3776AB?style=flat-square&logo=python&logoColor=white)
+![NumPy](https://img.shields.io/badge/NumPy-013243?style=flat-square&logo=numpy&logoColor=white)
+![JSON Schema](https://img.shields.io/badge/JSON--Schema-contracts-orange?style=flat-square)
 
 ---
 
